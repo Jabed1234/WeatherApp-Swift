@@ -16,11 +16,13 @@ An iOS Weather App built with SwiftUI that fetches real-time weather data from W
 
 ---
 ### 🛠 Tech Stack
-Tech	Description
-Language	Swift 5
-Framework	SwiftUI
-APIs	WeatherAPI, Unsplash
-IDE	Xcode
+
+| Tech | Description |
+| --- | --- |
+| Language | Swift 5 |
+| Framework | SwiftUI |
+| APIs | WeatherAPI, Unsplash |
+| IDE | Xcode |
 
 ---
 ### 📸 Screenshots:
@@ -31,20 +33,38 @@ IDE	Xcode
 
 ---
 ### 📦 Installation
-Clone this repository:
 
-```bash
-git clone https://github.com/Jabed1234/WeatherApp-Swift.git
-Open in Xcode:
-```
-```bash
-open WeatherApp-Swift.xcodeproj
-Run on iOS Simulator or your connected device.
-```
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Jabed1234/WeatherApp-Swift.git
+   cd WeatherApp-Swift
+   ```
+
+2. Open the project in Xcode:
+
+   ```bash
+   open project2.xcodeproj
+   ```
+
+3. Add your API keys (see below), then run on the iOS Simulator or a connected device.
+
+### 🔑 API Keys
+
+The app needs two free keys. They are read from `project2/Info.plist` and are not stored in this repository.
+
+1. Get a key from [WeatherAPI](https://www.weatherapi.com/) and an access key from [Unsplash Developers](https://unsplash.com/developers).
+2. In `project2/Info.plist`, replace `YOUR_WEATHERAPI_KEY` and `YOUR_UNSPLASH_ACCESS_KEY` with your keys.
+3. Tell git to ignore your local copy so the keys are never committed:
+
+   ```bash
+   git update-index --skip-worktree project2/Info.plist
+   ```
+
 ---
 ### ✨ About Me
 Jabed Miah – Aspiring iOS Developer | ML Enthusiast | Full Stack Developer
-📫 Contact: jabed.miah@email.com
+📫 Contact: jmiah5@fordham.edu
 
 ---
 ### 📑 License
