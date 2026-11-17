@@ -28,8 +28,9 @@ struct Page4: View {
     }
 
     func fetchCityImage(for city: String) {
-        let accessKey = "KBgI4O83E0YZ_Ql7T_Pzxq0Nc3ininaQdIj7R_Vl1ww"
-        let imageURL = "https://api.unsplash.com/photos/random?query=\(city)&client_id=\(accessKey)"
+        let accessKey = APIKeys.unsplash
+        let encodedCity = city.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let imageURL = "https://api.unsplash.com/photos/random?query=\(encodedCity)&client_id=\(accessKey)"
 
         guard let url = URL(string: imageURL) else {
             print("Invalid URL")

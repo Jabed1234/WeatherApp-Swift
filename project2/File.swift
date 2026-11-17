@@ -128,7 +128,7 @@ struct Page2: View {
     }
     
     func fetchWeatherData(for city: String) {
-        let apiKey = "9413702b5a44411b8e951912240205"
+        let apiKey = APIKeys.weather
         let encodedCity = city.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let urlString = "https://api.weatherapi.com/v1/current.json?key=\(apiKey)&q=\(encodedCity)&aqi=no"
         
